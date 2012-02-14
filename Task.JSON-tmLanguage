@@ -1,0 +1,28 @@
+{ "name": "task",
+  "scopeName": "text.task",
+  "fileTypes": ["task", "tasks", "todo.txt", "todo", "todolists"],
+  "patterns": [
+      { "name": "keyword",
+        "match": "\\b(New|new|NEW|Working|working|WORKING|Done|done|DONE|Todo|TODO|todo|bug|Bug|BUG|TBD|Note|NOTE|Notes|NOTES)\\b",
+        "comment": "Keywords"
+      },
+      {
+        "name": "keyword",
+        "match": "[\\[\\]]",
+        "comment": "[ and ]"
+      },
+      {  "name": "variable",
+         "match": "^[^-✓]*:\\s*",
+         "comment": "Task Title"
+      },
+      {  "name": "string",
+         "match": "^\\s*✓[^\\[\\]]*",
+         "comment": "Completed Tasks"
+      },
+      {  "name": "constant",
+         "match": "^\\s*-[^\\[\\]]*",
+         "comment": "Action Items"
+      }
+  ],
+  "uuid": "47fcd6b9-58c4-4518-855b-a7e16298177c"
+}

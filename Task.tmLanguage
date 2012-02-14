@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>task</string>
+		<string>tasks</string>
+		<string>todo.txt</string>
+		<string>todo</string>
+		<string>todolists</string>
+	</array>
+	<key>name</key>
+	<string>task</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Keywords</string>
+			<key>match</key>
+			<string>\b(New|new|NEW|Working|working|WORKING|Done|done|DONE|Todo|TODO|todo|bug|Bug|BUG|TBD|Note|NOTE|Notes|NOTES)\b</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>[ and ]</string>
+			<key>match</key>
+			<string>[\[\]]</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Task Title</string>
+			<key>match</key>
+			<string>^[^-✓]*:\s*</string>
+			<key>name</key>
+			<string>variable</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Completed Tasks</string>
+			<key>match</key>
+			<string>^\s*✓[^\[\]]*</string>
+			<key>name</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Action Items</string>
+			<key>match</key>
+			<string>^\s*-[^\[\]]*</string>
+			<key>name</key>
+			<string>constant</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.task</string>
+	<key>uuid</key>
+	<string>47fcd6b9-58c4-4518-855b-a7e16298177c</string>
+</dict>
+</plist>
