@@ -1,4 +1,4 @@
-{ "name": "task",
+{ "name": "Task",
   "scopeName": "text.task",
   "fileTypes": ["task", "tasks", "todo.txt", "todo", "todolists"],
   "patterns": [
