@@ -30,7 +30,7 @@ TODO: add this Package to [sublime_package_control](https://github.com/wbond/sub
 
 ##Shortcut Key & Key Binding
 
-By default, I mapped Command+Ctr+Enter (OS X) and Ctrl+Shift+Enter (Windows, Linux, disabled by default) for toggling the task status, you can simply remap to what’s the most comfortable for you in your Default User keymap file.
+By default, I mapped Command+Ctr+Enter (OS X) and Ctrl+Shift+Alt+Enter (Windows, Linux) for toggling the task status, you can simply remap to what’s the most comfortable for you in your Default User keymap file.
 
 * OS X:
 
@@ -41,7 +41,7 @@ By default, I mapped Command+Ctr+Enter (OS X) and Ctrl+Shift+Enter (Windows, Lin
 * Linux, Windows:
 
         [
-            { "keys": ["ctrl+shift+enter"], "command": "task"}
+            { "keys": ["ctrl+shift+alt+enter"], "command": "task"}
         ]
 
 ##Customization
