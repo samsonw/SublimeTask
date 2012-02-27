@@ -17,7 +17,7 @@ The location of the “Packages” packages directory depends on the OS you’re
 * OS X:
   *  ~/Library/Application Support/Sublime Text 2/Packages
 * Linux:
-  * ~/.Sublime Text 2/Packages
+  *  ~/.config/sublime-text-2/Packages
 * Windows:
   * %APPDATA%/Sublime Text 2/Packages
 
@@ -30,7 +30,7 @@ TODO: add this Package to [sublime_package_control](https://github.com/wbond/sub
 
 ##Shortcut Key & Key Binding
 
-By default, I mapped Command+Ctr+Enter (OS X) and Ctrl+Shift+Enter (Windows, Linux) for toggling the task status, you can simply remap to what’s the most comfortable for you in your Default User keymap file.
+By default, I mapped Command+Ctr+Enter (OS X) and Ctrl+Shift+Enter (Windows, Linux, disabled by default) for toggling the task status, you can simply remap to what’s the most comfortable for you in your Default User keymap file.
 
 * OS X:
 
