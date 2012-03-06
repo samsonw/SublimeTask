@@ -26,7 +26,9 @@ Take OS X for example:
     $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
     $ git clone git@github.com:samsonw/SublimeTask.git
 
-TODO: add this Package to [sublime_package_control](https://github.com/wbond/sublime_package_control), so later we can install it directly in editor via package control.
+~~TODO: add this Package to [sublime_package_control](https://github.com/wbond/sublime_package_control), so later we can install it directly in editor via package control.~~
+
+UPDATE: This package has already been accepted by [sublime_package_control](https://github.com/wbond/package_control_channel/pull/157), now you can install it directly in the editor, the package name there is just called “Task”.
 
 ##Shortcut Key & Key Binding
 
