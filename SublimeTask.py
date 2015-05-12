@@ -16,16 +16,12 @@ class TaskCommand(sublime_plugin.TextCommand):
                 self.view.replace(edit, line_region, processed_line)
 
     def process(self, line):
-        # below regex looks nice (works in ruby), but it won't work in python:
-        # p = re.compile('^(\s*)([-✓])(.*)')
-        # http://docs.python.org/howto/unicode
-        line = line.encode(self.current_encoding())
-        p = re.compile(ur'^(\s*)(-|\xe2\x9c\x93)(.*)', re.UNICODE)
+        p = re.compile('^(\s*)([-✓])(.*)', re.UNICODE)
         m = p.match(line)
         if m:
             symbol = '✓' if m.group(2) == '-' else '-'
             result = '%(leading_whitespace)s%(symbol)s%(content)s' % {'leading_whitespace': m.group(1), 'symbol': symbol, 'content': m.group(3)}
-            return result.decode(self.current_encoding())
+            return result
         else:
             return line
 
