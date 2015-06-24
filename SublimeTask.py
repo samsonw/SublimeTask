@@ -4,7 +4,6 @@
 import re
 import sublime_plugin
 
-
 class TaskCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         for region in self.view.sel():
@@ -20,10 +19,15 @@ class TaskCommand(sublime_plugin.TextCommand):
         # p = re.compile('^(\s*)([-✓])(.*)')
         # http://docs.python.org/howto/unicode
         line = line.encode(self.current_encoding())
-        p = re.compile(ur'^(\s*)(-|\xe2\x9c\x93)(.*)', re.UNICODE)
+        p = re.compile(ur'^(\s*)(-|~|\xe2\x9c\x93)(.*)', re.UNICODE)
         m = p.match(line)
         if m:
-            symbol = '✓' if m.group(2) == '-' else '-'
+            symbol = '-' 
+            if m.group(2) == '-': 
+               symbol = '~' 
+            elif m.group(2) == '~': 
+               symbol = '✓'
+
             result = '%(leading_whitespace)s%(symbol)s%(content)s' % {'leading_whitespace': m.group(1), 'symbol': symbol, 'content': m.group(3)}
             return result.decode(self.current_encoding())
         else:
