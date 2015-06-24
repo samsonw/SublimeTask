@@ -16,14 +16,20 @@ class TaskCommand(sublime_plugin.TextCommand):
                 self.view.replace(edit, line_region, processed_line)
 
     def process(self, line):
-        p = re.compile('^(\s*)([-✓])(.*)', re.UNICODE)
+        p = re.compile('^(\s*)([-~✓])(.*)', re.UNICODE)
         m = p.match(line)
         if m:
-            symbol = '✓' if m.group(2) == '-' else '-'
+            symbol = '-' 
+            if m.group(2) == '-': 
+               symbol = '~' 
+            elif m.group(2) == '~': 
+               symbol = '✓'
+
             result = '%(leading_whitespace)s%(symbol)s%(content)s' % {'leading_whitespace': m.group(1), 'symbol': symbol, 'content': m.group(3)}
             return result
         else:
             return line
+
 
     def current_encoding(self):
         if self.view.encoding() == 'Undefined':

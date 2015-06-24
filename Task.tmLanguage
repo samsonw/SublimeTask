@@ -34,9 +34,17 @@
 			<key>comment</key>
 			<string>Task Title</string>
 			<key>match</key>
-			<string>^[^-✓]*:\s+</string>
+			<string>^[^-~✓]*:\s+</string>
 			<key>name</key>
-			<string>variable</string>
+			<string>support.function</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Started Tasks</string>
+			<key>match</key>
+			<string>^\s*~[^\[\]]*</string>
+			<key>name</key>
+			<string>variable.parameter</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -44,7 +52,7 @@
 			<key>match</key>
 			<string>^\s*✓[^\[\]]*</string>
 			<key>name</key>
-			<string>string</string>
+			<string>entity.other.attribute-name</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -52,7 +60,7 @@
 			<key>match</key>
 			<string>^\s*-[^\[\]]*</string>
 			<key>name</key>
-			<string>constant</string>
+			<string>keyword</string>
 		</dict>
 		<dict>
 			<key>comment</key>
