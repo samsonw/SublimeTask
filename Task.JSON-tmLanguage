@@ -11,15 +11,19 @@
         "match": "[\\[\\]]",
         "comment": "[ and ]"
       },
-      {  "name": "variable",
-         "match": "^[^-✓]*:\\s+",
+      {  "name": "support.function",
+         "match": "^[^-~✓]*:\\s+",
          "comment": "Task Title"
       },
-      {  "name": "string",
+      {  "name": "variable.parameter",
+         "match": "^\\s*~[^\\[\\]]*",
+         "comment": "Started Tasks"
+      },
+      {  "name": "entity.other.attribute-name",
          "match": "^\\s*✓[^\\[\\]]*",
          "comment": "Completed Tasks"
       },
-      {  "name": "constant",
+      {  "name": "keyword",
          "match": "^\\s*-[^\\[\\]]*",
          "comment": "Action Items"
       },
